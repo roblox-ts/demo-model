@@ -4,7 +4,7 @@ language: rust
 cache: cargo
 
 install:
-  - n latest
+  - nvm install 10
   - npm install -g roblox-ts
   - cargo install rojo --version 0.5.0-alpha.11
 
