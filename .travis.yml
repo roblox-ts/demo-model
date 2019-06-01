@@ -1,7 +1,9 @@
 sudo: required
 language: rust
 
-cache: cargo
+cache:
+  - cargo
+  - npm
 
 install:
   - nvm install 10
