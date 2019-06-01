@@ -10,7 +10,7 @@ cache:
 install:
   - nvm install 10
   - npm install -g roblox-ts
-  - cargo install rojo --version 0.5.0-alpha.11 --force
+  - command -v rojo >/dev/null 2>&1 || { cargo install rojo --version 0.5.0-alpha.11; }
 
 script:
   - npm install
