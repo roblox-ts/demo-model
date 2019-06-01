@@ -1,8 +1,10 @@
 sudo: required
 language: rust
 
+cache: cargo
+
 install:
-  - curl -L https://git.io/n-install | bash
+  - n latest
   - npm install -g roblox-ts
   - cargo install rojo --version 0.5.0-alpha.11
 
