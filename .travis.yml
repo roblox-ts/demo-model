@@ -1,9 +1,9 @@
-language: node_js
-node_js: 10
+sudo: required
+language: rust
 
 install:
+  - curl -L https://git.io/n-install | bash
   - npm install -g roblox-ts
-  - sudo apt install cargo -y
   - cargo install rojo --version 0.5.0-alpha.11
 
 script:
