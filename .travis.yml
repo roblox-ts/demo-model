@@ -1,10 +1,9 @@
 language: node_js
 node_js: 10
-rust:
-  - 1.32.0
 
 install:
   - npm install -g roblox-ts
+  - sudo apt install cargo -y
   - cargo install rojo --version 0.5.0-alpha.11
 
 script:
