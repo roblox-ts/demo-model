@@ -1,6 +1,8 @@
 sudo: required
 language: rust
 
+rust: 1.32.0
+
 cache:
   - cargo
   - npm
@@ -8,7 +10,7 @@ cache:
 install:
   - nvm install 10
   - npm install -g roblox-ts
-  - command -v rojo >/dev/null 2>&1 || { cargo install rojo --version 0.5.0-alpha.11; }
+  - command -v rojo >/dev/null 2>&1 || { cargo install rojo --version 0.5.0-alpha.11 --force; }
 
 script:
   - npm install
