@@ -1,6 +1,8 @@
 sudo: required
 language: rust
 
+if: tag IS present
+
 rust: 1.32.0
 
 cache:
@@ -22,4 +24,3 @@ deploy:
   api_key: "$GITHUB_API_KEY"
   file: "bundle.rbxmx"
   skip_cleanup: true
-  draft: true
