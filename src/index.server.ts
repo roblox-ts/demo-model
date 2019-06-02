@@ -1,3 +1,3 @@
 export {};
 
-print("Hello from roblox-ts bundle!");
+print("Hello from my roblox-ts bundle!");
