@@ -24,3 +24,6 @@ deploy:
   api_key: "$GITHUB_API_KEY"
   file: "bundle.rbxmx"
   skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
