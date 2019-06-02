@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"release": "npm version patch && git push --tags",
 		"build": "rbxtsc && rojo build --output build.rbxlx",
 		"install-rojo": "cargo install --force --git https://github.com/LPGhatguy/rojo.git"
 	},
