@@ -16,6 +16,7 @@ install:
 
 script:
   - npm install
+  - npm install @rbxts/types
   - rbxtsc
   - rojo build -o bundle.rbxmx
 
