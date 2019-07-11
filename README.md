@@ -21,7 +21,8 @@ This will compile your files into the `out` folder and then create a `build.rbxm
 
 ## Releases
 
-This template allows you to release compiled .rbxmx files automatically using Travis CI!
+This template allows you to release compiled .rbxmx files automatically using Travis CI!\
+This is useful for manually distributing model or plugin files.
 
 1. Connect your repo to Travis CI\
 You'll need to make an account, and enable CI for the repo you created.
