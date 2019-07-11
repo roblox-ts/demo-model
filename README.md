@@ -26,7 +26,7 @@ This template allows you to release compiled .rbxmx files automatically using Tr
 1. Connect your repo to Travis CI\
 You'll need to make an account, and enable CI for the repo you created.
 
-2. Get a new token from [here](https://github.com/settings/tokens) with "repo" permissions
+2. Generate a new token from [here](https://github.com/settings/tokens) with "repo" permissions
 
 3. Create a new environment variable in your Travis CI repo settings\
 The name should be `GITHUB_API_KEY`\
