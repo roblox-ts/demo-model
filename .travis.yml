@@ -18,12 +18,12 @@ script:
   - npm install
   - npm install @rbxts/types
   - rbxtsc
-  - rojo build -o bundle.rbxmx
+  - rojo build -o model.rbxmx
 
 deploy:
   provider: releases
   api_key: "$GITHUB_API_KEY"
-  file: "bundle.rbxmx"
+  file: "model.rbxmx"
   skip_cleanup: true
   on:
     tags: true
