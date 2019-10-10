@@ -28,6 +28,10 @@ jobs:
           npm install @rbxts/types
 
       - run: rbxtsc
+
+      - run: sudo apt install tree >/dev/null && tree
+      - run: rojo -V
+
       - run: rojo build -o model.rbxmx
 
       - name: GitHub Releases
