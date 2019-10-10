@@ -33,6 +33,6 @@ jobs:
 
       - name: GitHub Releases
         uses: fnkr/github-action-ghr@v1.1
-        with:
+        env:
           GHR_PATH: "./model.rbxmx"
           GITHUB_TOKEN: ${{ secrets.github_token }}
