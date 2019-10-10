@@ -2,8 +2,8 @@
 
 set -e
 
-npm version $1 >/dev/null
-git add -A >/dev/null
-git commit -m "release $1" >/dev/null
-git push >/dev/null
+npm version $1
+git add -A
+git commit -m "release $1"
+git push
 echo "release $1"
