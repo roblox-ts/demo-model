@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-npm version $1
-git add -A
-git commit -m "release $1"
-git push
-echo "release $1"
