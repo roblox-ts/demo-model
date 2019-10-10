@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: rojo
+
+      - name: Install NodeJS
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+
+      - name: Install node_modules
+        run: |
+          npm install -g roblox-ts
+          npm install @rbxts/types
+
+      - run: rbxtsc
+      - run: rojo build -o model.rbxmx
+
+      - name: GitHub Releases
+        uses: fnkr/github-action-ghr@v1.1
+        with:
+          GHR_PATH: model.rbxmx
+          GITHUB_TOKEN: ${{ secrets.github_token }}
