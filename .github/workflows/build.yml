@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions-rs/cargo@v1
+      - uses: actions/checkout@master
+
+      - uses: actions-rs/cargo@master
         with:
           command: install
           args: rojo
