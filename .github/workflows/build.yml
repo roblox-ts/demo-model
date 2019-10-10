@@ -29,13 +29,10 @@ jobs:
 
       - run: rbxtsc
 
-      - run: sudo apt install tree >/dev/null && tree
-      - run: rojo -V
-
       - run: rojo build -o model.rbxmx
 
       - name: GitHub Releases
         uses: fnkr/github-action-ghr@v1.1
         with:
-          GHR_PATH: model.rbxmx
+          GHR_PATH: "./model.rbxmx"
           GITHUB_TOKEN: ${{ secrets.github_token }}
