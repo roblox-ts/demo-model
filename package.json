@@ -1,6 +1,6 @@
 {
 	"name": "roblox-ts-demo-model",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"scripts": {
 		"release-major": "npm version major && git push --tags",
