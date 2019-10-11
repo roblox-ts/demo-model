@@ -1,9 +1,10 @@
 name: Build
 
-on:
-  push:
-    tags:
-      - 'v*'
+# on:
+#   push:
+#     tags:
+#       - 'v*'
+on: push
 
 jobs:
   build:
@@ -12,24 +13,24 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: actions-rs/cargo@master
-        with:
-          command: install
-          args: rojo
+      # - uses: actions-rs/cargo@master
+      #   with:
+      #     command: install
+      #     args: rojo
 
-      - name: Install NodeJS
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.x
+      # - name: Install NodeJS
+      #   uses: actions/setup-node@master
+      #   with:
+      #     node-version: 12.x
 
-      - name: Install node_modules
-        run: |
-          npm install -g roblox-ts
-          npm install @rbxts/types
+      # - name: Install node_modules
+      #   run: |
+      #     npm install -g roblox-ts
+      #     npm install @rbxts/types
 
-      - run: rbxtsc
+      # - run: rbxtsc
 
-      - run: rojo build -o model.rbxmx
+      # - run: rojo build -o model.rbxmx
 
       - name: Create Release
         id: create_release
