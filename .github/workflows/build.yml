@@ -51,4 +51,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./model.rbxmx
           asset_name: model.rbxmx
-          asset_content_type: text/xml
+          asset_content_type: application/octet-stream
