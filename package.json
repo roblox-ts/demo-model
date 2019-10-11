@@ -1,13 +1,12 @@
 {
 	"name": "roblox-ts-demo-model",
-	"version": "1.0.16",
+	"version": "1.0.0",
 	"description": "",
 	"scripts": {
+		"build": "rbxtsc && rojo build --o model.rbxmx",
 		"release-major": "npm version major && git push --tags",
 		"release-minor": "npm version minor && git push --tags",
-		"release-patch": "npm version patch && git push --tags",
-		"build": "rbxtsc && rojo build --output build.rbxmx",
-		"install-rojo": "cargo install --force --git https://github.com/LPGhatguy/rojo.git"
+		"release-patch": "npm version patch && git push --tags"
 	},
 	"repository": {
 		"type": "git",
