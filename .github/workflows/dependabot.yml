@@ -10,4 +10,5 @@ jobs:
       - uses: squalrus/merge-bot@v0.2.0
         with:
           GITHUB_TOKEN: ${{ secrets.github_token }}
+          required labels: []
           method: squash
