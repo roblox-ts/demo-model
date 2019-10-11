@@ -1,0 +1,13 @@
+name: Merge Dependabot
+
+on: pull_request
+
+jobs:
+  merge:
+    if: startsWith(github.actor, 'dependabot')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: squalrus/merge-bot@v0.2.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+          method: squash
