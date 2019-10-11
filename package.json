@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"build": "rbxtsc && rojo build --o model.rbxmx",
+		"build": "rbxtsc && rojo build -o model.rbxmx",
 		"release-major": "npm version major && git push --tags",
 		"release-minor": "npm version minor && git push --tags",
 		"release-patch": "npm version patch && git push --tags"
