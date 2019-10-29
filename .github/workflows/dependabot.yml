@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: pascalgn/automerge-action@master
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
           MERGE_METHOD: squash
