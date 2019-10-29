@@ -10,4 +10,5 @@ jobs:
       - uses: pascalgn/automerge-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
+          AUTOMERGE: dependencies
           MERGE_METHOD: squash
