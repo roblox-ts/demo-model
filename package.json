@@ -1,6 +1,6 @@
 {
 	"name": "roblox-ts-demo-model",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "",
 	"scripts": {
 		"build": "rbxtsc && rojo build -o model.rbxmx",
