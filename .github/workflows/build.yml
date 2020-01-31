@@ -16,13 +16,8 @@ jobs:
         with:
           version: 0.6.0-alpha.1
 
-      - run: rojo -V
-
-      - name: Install node_modules
-        run: |
-          npm install -g roblox-ts
-          npm install @rbxts/types
-
+      - run: npm install -g roblox-ts
+      - run: npm install -D @rbxts/types
       - run: npm run build
 
       - name: Release
