@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: osyrisrblx/setup-rojo@v1
+        with:
+          version: 0.6.0-alpha.1
+
+      - run: |
+          sudo npm install -g roblox-ts
+          npm install -D @rbxts/types
+          npm run build
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          files: model.rbxmx
