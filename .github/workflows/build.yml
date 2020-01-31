@@ -18,7 +18,7 @@ jobs:
           wget https://github.com/rojo-rbx/rojo/releases/download/v$ROJO_VERSION/rojo-$ROJO_VERSION-linux.zip
           unzip rojo-$ROJO_VERSION-linux.zip
           rm rojo-$ROJO_VERSION-linux.zip
-          mv rojo /usr/local/bin
+          sudo mv rojo /usr/local/bin
 
       - run: rojo -V
 
