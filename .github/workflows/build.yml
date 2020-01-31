@@ -12,15 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: actions-rs/cargo@master
-        with:
-          command: install
-          args: rojo
+      - name: Install Rojo
+        run: |
+          ROJO_VERSION=0.6.0-alpha.1
+          wget https://github.com/rojo-rbx/rojo/releases/download/v$ROJO_VERSION/rojo-$ROJO_VERSION-linux.zip
+          unzip rojo-$ROJO_VERSION-linux.zip
+          rm rojo-$ROJO_VERSION-linux.zip
+          mv rojo /usr/local/bin
 
-      - name: Install NodeJS
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.x
+      - run: rojo -V
 
       - name: Install node_modules
         run: |
