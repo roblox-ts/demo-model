@@ -12,14 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Install Rojo
-        run: |
-          ROJO_VERSION=0.6.0-alpha.1
-          wget https://github.com/rojo-rbx/rojo/releases/download/v$ROJO_VERSION/rojo-$ROJO_VERSION-linux.zip
-          unzip rojo-$ROJO_VERSION-linux.zip
-          rm rojo-$ROJO_VERSION-linux.zip
-          chmod +x rojo
-          sudo mv rojo /usr/local/bin
+      - uses: osyrisrblx/setup-rojo@master
+        with:
+          version: 0.6.0-alpha.1
 
       - run: rojo -V
 
